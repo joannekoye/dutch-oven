@@ -1,7 +1,19 @@
 //Business logic
   function sizeCost() {
     var size=$("#size").val();
-    return parseInt(size);
+    if(size==="Small @ $6"){
+      var smallCost = 6;
+    }
+    else if(size==="Medium @ $9"){
+      var smallCost = 9;
+    }
+    else if(size ==="Large @ $12"){
+      var smallCost = 12;
+    }
+    else if(size ==="Mega Large @16"){
+      var smallCost = 16;
+    }
+    return smallCost;
   }
   function crustCost() {
     var crust = $('#crust').val();
@@ -16,7 +28,7 @@
     return parseInt(top2);
   }
   function numberOfPizzasCost() {
-    var numberOfPizzas = $('#top1').val();
+    var numberOfPizzas = $('#numberOfPizzas').val();
     return parseInt(numberOfPizzas);
   }
 
