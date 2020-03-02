@@ -1,6 +1,6 @@
 
 # Dutch-Oven-Pizzeria
-#### A pizza store website where customers can view the restaurant details as well as place orders for their pizzers to be deliveres, 2020
+#### A pizza store website where customers can view the restaurant details as well as place orders for their pizzers to be delivered, 2020
 #### By **Joan Nekoye**
 ## Description
 The website contains a home section, an About Us section, Ingredients Section and a form for placing an order. The form then returns the price and details of an order or location is the customer has chosen a delivery
