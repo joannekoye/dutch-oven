@@ -141,3 +141,9 @@ form {
   display: none;
   color:red;
 }
+#deliverOption {
+  display: none;
+}
+#contactAddress{
+  display: none;
+}
