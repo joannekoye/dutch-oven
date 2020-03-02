@@ -131,19 +131,20 @@ form {
 #toppings {
   float: left;
 }
-#displayNumber {
-  display: none;
-}
-#displayLocation {
-  display: none;
-}
+
 #pickUpOption {
   display: none;
   color:red;
 }
 #deliverOption {
   display: none;
+  color: blue;
 }
-#contactAddress{
-  display: none;
+.newOrderAlert {
+  color: green;
 }
+.form-control {
+  color: black;
+  font-size: 120%;
+}
+

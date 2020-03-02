@@ -100,15 +100,6 @@
             <h6>(Orders are limited to pizzas and available only in Nairobi)</h6>
             <br>
           </div>
-          <div class="row">
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" id="pickUp">Pick Up Order</button>
-            </div>
-            <h5> OR </h5>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" id="deliver">Deliver Order</button>
-            </div>
-          </div>
           <br>
           <form>
            <div class="row">
@@ -117,29 +108,25 @@
                 <label for="location">Location and Address:</label>
                 <input class="form-control" id="location" placeholder="e.g. Riverside Drive, DusitD2 - House 254">
               </div>
-              <div class="form-group" id="displayNumber">
-                <label for="contact">Phone number:</label>
-                <input type="number" class="form-control" id="number" placeholder="e.g. +254720202020">
-              </div>
-              <div class="form-group">
-                <label for="pizzaType">Select the type of pizza:</label>
-                <select class="form-control" id="pizzaType">
+              <div class="form-group type">
+                <label for="type">Select the type of pizza:</label>
+                <select class="form-control" id="type">
                   <option id="grilled">Grilled Pizza</option>
                   <option id="veggie">High-Heat Roasted Veggie Pizza</option>
                   <option id="steak">Dirty Steak Pizza with Hot Fanny Sauce</option>
                   <option id="clams">Clams Al Forno Pizza</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="pizzaSize">Select the size of your pizza:</label>
-                <select class="form-control" id="pizzaSize">
+              <div class="form-group size">
+                <label for="size">Select the size of your pizza:</label>
+                <select class="form-control" id="size">
                   <option>Small(serves 1)</option>
                   <option>Medium(serves 2)</option>
                   <option>Large(serves 3-4)</option>
                   <option>Mega Large(serves 6)</option>
                 </select>
               </div>
-              <div class="form-group">
+              <div class="form-group crust">
                 <label for="crust">Select the type of crust:</label>
                 <select class="form-control" id="crust">
                   <option>Hand Tossed</option>
@@ -147,34 +134,55 @@
                   <option>Pan Pizza</option>
                 </select>
               </div>
-              <label for="toppings">Select the your desired topping(s):</label>
-              <div class="container">
-                <label><input type="checkbox" value="bacon" id="bacon" name="toppings"> Bacon</label><br>
-                <label><input type="checkbox" value="pineapple" id="pineapple" name="toppings"> Pineapple</label><br>
-                <label><input type="checkbox" value="pepperoni" id="pepperoni" name="toppings"> Pepperoni</label><br>
-                <label><input type="checkbox" value="cheese" id="cheese" name="toppings"> Extra Cheese</label><br>
-                <label><input type="checkbox" value="mushrooms" id="mushrooms" name="toppings"> Mushrooms</label><br>
-                <label><input type="checkbox" value="olives" id="olives" name="toppings">Black Olives</label>
-               </div>
-             <br><br><br>
-             <button type="submit" class="btn btn-primary" id="placeOrder">Place Order</button>
-             <br><br>
+              <h4>Choose your extra Toppings</h4>
+            <div class="top">
+              <h5>Non-vegetarian Toppings:</h5>
+              <select class="form-control" id="top1">
+                <option>Beef strips</option>
+                <option>Pepperoni</option>
+                <option>Bacon</option>
+              </select>
+              <h5>Vegetarian Toppings:</h5>
+              <select class="form-control" id="top2">
+                <option>Extra Cheese</option>
+                <option>Pineapples</option>
+                <option>Black Olives</option>
+              </select>
             </div>
+            <br><br>
+            <div class="form-group">
+              <label for="numberOfPizzas">Enter number of Pizzas:</label>
+              <input type="number" class="form-control" id="numberOfPizzas">
+            </div>
+            <br><br>
+            <div class="row">
+              <div class="col-md-3">
+                <button type="submit" class="btn btn-primary" id="pickUp">Pick Up Order</button>
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn btn-primary" id="deliver">Deliver Order</button>
+              </div>
+              <h5 class="newOrderAlert"><strong> Clear fields to add different Order</strong></h5>
+              <div class="col-md-3">
+                
+              </div>
+            </div>
+            <br><br> 
+          </div>
             <div class="col-md-5" id="priceCheckout">
               <h1>Cart</h1>
               <br><br><br>
               <h2>Price: $ <span id="totalPrice"></span></h2>
               <br>
               <h3>Order Details:</h3>
-              <ul id="orderDetails">
-                
-              </ul>
+              <ul id="pickUpOrderDetails"></ul>
+              <ul id="deliveryOrderDetails"></ul>
               <br><br>
                 <div id="pickUpOption">
                   <h4>PICK-UP BY CUSTOMER</h4>
                 </div>
                 <div id="deliverOption">
-                  <h5>"DELIVERY CONTACT AND ADDRESS: "<span id="contactAddress"></span></h5>
+                  <h5>"DELIVERY ADDRESS: "<span id="address"></span></h5>
                 </div>
               <br><br>
               <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
