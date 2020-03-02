@@ -1,4 +1,4 @@
-# dutch-oven
+
 # Dutch-Oven-Pizzeria
 #### A pizza store website where customers can view the restaurant details as well as place orders for their pizzers to be deliveres, 2020
 #### By **Joan Nekoye**
@@ -12,7 +12,7 @@ The website contains a home section, an About Us section, Ingredients Section an
 ## Known Bugs
 Cannot delete a placed order.
 ## Technologies Used
-HTML, CSS, JavaSCript, JQuery and CSS bootsrap
+HTML, CSS, JavaSCript, JQuery and CSS bootsrap.
 ## Support and contact details
 Feel free to contact me on: joannekoye@gmail.com
 ### License
