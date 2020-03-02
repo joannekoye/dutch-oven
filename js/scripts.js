@@ -2,30 +2,57 @@
   function sizeCost() {
     var size=$("#size").val();
     if(size==="Small @ $6"){
-      var smallCost = 6;
+      var indSizeCost = 6;
     }
     else if(size==="Medium @ $9"){
-      var smallCost = 9;
+      var indSizeCost = 9;
     }
     else if(size ==="Large @ $12"){
-      var smallCost = 12;
+      var indSizeCost = 12;
     }
-    else if(size ==="Mega Large @16"){
-      var smallCost = 16;
+    else if(size ==="Mega Large @ $16"){
+      var indSizeCost = 16;
     }
-    return smallCost;
+    return indSizeCost;
   }
   function crustCost() {
     var crust = $('#crust').val();
-    return parseInt(crust);
+    if(crust ==="Hand Tossed @ $1"){
+      var indCrustCost = 1;
+    }
+    else if(crust==="Thin Crust @ $3"){
+      var indCrustCost = 3;
+    }
+    else if(crust ==="Pan Pizza @ $4"){
+      var indCrustCost = 4;
+    }
+    return indCrustCost;
   }
   function top1Cost() {
     var top1 = $('#top1').val();
-    return parseInt(top1);
+    if(top1 ==="Beef strips @ $2"){
+      var indTop1Cost  = 2;
+    }
+    else if(top1==="Pepperoni @ $2"){
+      var indTop1Cost  = 2;
+    }
+    else if(top1 ==="Bacon @ $2"){
+      var indTop1Cost = 2;
+    }
+    return indTop1Cost;
   }
   function top2Cost() {
-    var top2 = $('#top1').val();
-    return parseInt(top2);
+    var top2 = $('#top2').val();
+    if(top2 ==="Extra Cheese @ $2"){
+      var indTop2Cost  = 2;
+    }
+    else if(top2==="Pineapples @ $2"){
+      var indTop2Cost  = 2;
+    }
+    else if(top2 ==="Black Olives @ $2"){
+      var indTop2Cost = 2;
+    }
+    return indTop2Cost;
   }
   function numberOfPizzasCost() {
     var numberOfPizzas = $('#numberOfPizzas').val();
@@ -33,7 +60,7 @@
   }
 
   function calculatePrice (e) {
-    var totalPrice = (sizeCost()+crustCost()+top1Cost()+top2Cost()*numberOfPizzasCost());
+    var totalPrice = (sizeCost()+crustCost()+top1Cost()+top2Cost()) * numberOfPizzasCost();
     console.log (totalPrice);
     
     $('#totalPrice').text( + totalPrice + "  Time: 30 min.")
@@ -51,7 +78,10 @@
   pizza.prototype.fullOrder= function() {
     return "You ordered " +this.numberOfPizzas+" "+ this.size + " " +this.crust +" "+this.type+ " with " + this.top1 + " and " + this.top2 ;
   }
-  
+
+  function checkOut (){
+  alert("Successfully checked Out. Your Order has been received!")
+  }
   //user-interface
   $(document).ready(function() {
     $('#pickUp').click(function(event) {
@@ -93,6 +123,8 @@
       $('#pickUpOrderDetails').hide();
       $('ul#deliveryOrderDetails').show();
       $("ul#deliveryOrderDetails").append("<li><span class=order>" + newOrder.fullOrder() + " <br> (Delivery Charge: $ 1)" + "</span></li>");
+
+
     });
        
   
