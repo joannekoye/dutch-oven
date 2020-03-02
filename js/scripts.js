@@ -63,7 +63,7 @@
     var totalPrice = (sizeCost()+crustCost()+top1Cost()+top2Cost()) * numberOfPizzasCost();
     console.log (totalPrice);
     
-    $('#totalPrice').text( + totalPrice + "  Time: 30 min.")
+    $('#totalPrice').text( + totalPrice + "  Estimated time: 30 min.")
   }
 
   function pizza (type, size, crust, top1, top2, numberOfPizzas) {
