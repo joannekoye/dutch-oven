@@ -1,5 +1,30 @@
 //Business logic
-  
+  function sizeCost() {
+    var size=$("#size").val();
+    return parseInt(size);
+  }
+  function crustCost() {
+    var crust = $('#crust').val();
+    return parseInt(crust);
+  }
+  function top1Cost() {
+    var top1 = $('#top1').val();
+    return parseInt(top1);
+  }
+  function top2Cost() {
+    var top2 = $('#top1').val();
+    return parseInt(top2);
+  }
+  function numberOfPizzasCost() {
+    var numberOfPizzas = $('#top1').val();
+    return parseInt(numberOfPizzas);
+  }
+
+  function totalPrice (event) {
+    event.preventDefault();
+    
+  }
+
 
   function pizza (type, size, crust, top1, top2, numberOfPizzas) {
     this.type = type;
