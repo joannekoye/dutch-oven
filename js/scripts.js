@@ -80,7 +80,7 @@
   }
 
   function checkOut (){
-  alert("Successfully checked Out. Your Order has been received!")
+  alert("Successfully checked out. Your order has been received!")
   }
   //user-interface
   $(document).ready(function() {
