@@ -122,7 +122,7 @@
       
       $('#pickUpOrderDetails').hide();
       $('ul#deliveryOrderDetails').show();
-      $("ul#deliveryOrderDetails").append("<li><span class=order>" + newOrder.fullOrder() + " <br> (Delivery Charge: $ 1)" + "</span></li>");
+      $("ul#deliveryOrderDetails").append("<li><span class=order>" + newOrder.fullOrder() + " <br> (Separate Delivery Charge: $ 1)" + "</span></li>");
 
 
     });
